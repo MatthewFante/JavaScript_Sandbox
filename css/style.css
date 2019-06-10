@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+:root {
+    background: #e4e3e3;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
+header,
+main{
+    width: 40%;
+    background: #fff;
+    margin: auto;
+    padding: 10px;
+}
+
+header{
+    text-align: center;
+}
+
+.dot{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    color: white;
+    background: tomato;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    margin-top: 5px;
+}
+
+h4{
+    display: inline;
+}
+
+#number,
+#factorialSolution{
+    margin-left: 24px;
+}
