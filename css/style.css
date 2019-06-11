@@ -5,15 +5,18 @@
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
+
 header,
-main{
+main,
+footer{
     width: 70%;
     background: #fff;
     margin: auto;
     padding: 10px;
 }
 
-header{
+header,
+footer{
     text-align: center;
 }
 
@@ -31,6 +34,10 @@ header{
     margin-top: 5px;
 }
 
+h1{
+    margin: 0;
+}
+
 h4{
     display: inline;
 }
@@ -41,7 +48,8 @@ h4{
 
 @media(min-width: 769px){
     header,
-    main{
+    main,
+    footer{
         width: 40%;
     }
 }

@@ -4,16 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Javascript Sandbox</title>
+        <title>Matthew's JavaScript Sandbox</title>
         <link rel="stylesheet" href="css/style.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
         
     </head>
     <body>
         <header>
-            <h1>Javascript Sandbox</h1>
+            <small>Matthew's</small>
+            <h1>JavaScript Sandbox</h1>
+            <button id="expandAll">Expand all</button>
+            <button id="collapseAll">Collapse all</button>
         </header>
 
         <main>
@@ -25,21 +27,26 @@
 
                     <div class="functionBody">
                         <div class="factorial">
-                            <input type="number" id="factorialInput" placeholder="Enter a number" min="1" />
+                            <input type="number" id="factorialInput" class="clearForm" placeholder="Enter a number" min="1" /><br />
                             <button id="factorialButton">Get Factorial</button>
-                            <p id="factorialSolution">  x! = ____</p>
+                            <p id="factorialSolution"></p>
                         </div>
                 </div>
 
                 <div class="function">
                     <span class="functionHead">
                         <div class="dot">2</div>
-                        <h4>Second Function</h4><br />
+                        <h4>Multiply or Divide</h4><br />
                     </span>
 
                     <div class="functionBody">
-                        <p>[Function Content]</p>
-
+                        <div class="multiplyDivide">
+                            <input type="number" id="multiplyDivideInput1" class="clearForm" placeholder="First number" />
+                            <input type="number" id="multiplyDivideInput2" class="clearForm" placeholder="Second number" /><br />
+                            <button id="multiplyButton">Multiply</button>
+                            <button id="divideButton">Divide</button>
+                            <p id="multiplyDivideSolution"></p>
+                        </div>
                     </div>
                 </div>
 
@@ -47,15 +54,25 @@
                 <div class="function">
                     <span class="functionHead">
                         <div class="dot">3</div>
-                        <h4>Third Function</h4><br />
+                        <h4>Remove vowels or consonants from string</h4><br />
                     </span>
 
                     <div class="functionBody">
-                        <p>[Function Content]</p>
-
+                        <div class="removeLetters">
+                            <input type="text" id="removeLettersInput" class="clearForm" placeholder="Enter a string"/><br />
+                            <button id="removeVowelsButton">Remove vowels</button>
+                            <button id="removeConsonantsButton">Remove consonants</button>
+                            <p id="removeLettersSolution"></p>
+                        </div>
                     </div>
                 </div>
         </main>
+
+        <footer>
+            <button id="reset">Reset</button><br />
+            <small>&copy; Matthew Fante 2019</small>
+
+        </footer>
         <script src="js/script.js"></script>
     </body>
 </html>
