@@ -1,11 +1,7 @@
 const factorialButton =  document.getElementById('factorialButton');
 const factorialSolution = document.getElementById('factorialSolution');
-const numberPicker = document.getElementById('number');
+const factorialInput = document.getElementById('factorialInput');
 
-const functionHead = document.querySelector('.functionHead');
-
-// const dot = document.querySelector('.dot');
-// const factorialDiv = document.getElementById('factorial');
 
 function factorial(x){
     let total = 1;
@@ -16,15 +12,17 @@ function factorial(x){
 }
 
 factorialButton.addEventListener('click', ()=> {
-    factorialSolution.textContent = numberPicker.value + '! = ' + factorial(numberPicker.value);
+    factorialSolution.textContent = ' ' + factorialInput.value + '! = ' + factorial(factorialInput.value);
 });
 
 
 $('.functionBody').hide();
 
-
-
 $('.functionHead').click(function() {
-    // functionHead.nextElementSibling.style.display = 'block';
-    $(this).siblings('.functionBody').slideDown();
+    if ($(this).siblings('.functionBody').css("display") == "none"){
+        $(this).siblings('.functionBody').slideDown();
+        }
+    else {
+        $(this).siblings('.functionBody').slideUp();
+    }
 });

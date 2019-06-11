@@ -3,12 +3,11 @@
 :root {
     background: #e4e3e3;
     font-family: 'Open Sans Condensed', sans-serif;
-
 }
 
 header,
 main{
-    width: 40%;
+    width: 70%;
     background: #fff;
     margin: auto;
     padding: 10px;
@@ -36,7 +35,13 @@ h4{
     display: inline;
 }
 
-#number,
-#factorialSolution{
-    margin-left: 24px;
+.functionBody{
+    margin-left: 20px;
+}
+
+@media(min-width: 769px){
+    header,
+    main{
+        width: 40%;
+    }
 }
