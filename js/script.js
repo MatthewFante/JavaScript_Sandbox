@@ -23,7 +23,7 @@ function initialValues(){
     factorialSolution.textContent = '  x! = ____';
     multiplyDivideSolution.textContent = '[x * y = ___ ] or [x / y = ___]';
     removeLettersSolution.textContent = '[Resulting string]';
-    rgbOutput.textContent = '[ RGB VALUE ]';
+    rgbOutput.textContent = '[ RGB Value ]';
 }
 
 // Clear form inputs and solutions
