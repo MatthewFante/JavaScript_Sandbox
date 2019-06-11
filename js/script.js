@@ -23,12 +23,14 @@ function initialValues(){
     factorialSolution.textContent = '  x! = ____';
     multiplyDivideSolution.textContent = '[x * y = ___ ] or [x / y = ___]';
     removeLettersSolution.textContent = '[Resulting string]';
+    rgbOutput.textContent = '[ RGB VALUE ]';
 }
 
 // Clear form inputs and solutions
 $('#reset').click(function() {
     $('input').val('');
     initialValues();
+    rgbOutput.style.backgroundColor = '#fff';
 });
 
 // Function 1: Factorial
@@ -95,6 +97,32 @@ removeVowelsButton.addEventListener('click', ()=> {
 removeConsonantsButton.addEventListener('click', ()=> {
     removeLettersSolution.textContent = removeConsonants(removeLettersInput.value);
 });
+
+// Function 4: RGB Color Generator
+
+const rValue = document.getElementById('rValue');
+const gValue = document.getElementById('gValue');
+const bValue = document.getElementById('bValue');
+const rgbGenerateButton = document.getElementById("rgbGenerate");
+const rgbOutput = document.getElementById('rgbOutput');
+
+function rgbString(){
+    let rgbValue = 'rgb(';
+    rgbValue += parseInt(rValue.value);
+    rgbValue += ', ';
+    rgbValue += parseInt(gValue.value);
+    rgbValue += ', ' 
+    rgbValue += parseInt(bValue.value);
+    rgbValue += ')';
+    return rgbValue;
+}
+
+rgbGenerateButton.addEventListener('click', ()=> {
+    rgbOutput.style.backgroundColor = rgbString();
+    rgbOutput.textContent = rgbString();
+});
+
+
 
 //Runs when page loads to set initial values for solution fields
 initialValues();
