@@ -104,20 +104,30 @@ const rValue = document.getElementById('rValue');
 const gValue = document.getElementById('gValue');
 const bValue = document.getElementById('bValue');
 const rgbGenerateButton = document.getElementById("rgbGenerate");
+const rgbRandomizeButton = document.getElementById("rgbRandomize");
 const rgbOutput = document.getElementById('rgbOutput');
 
 function rgbString(){
     let rgbValue = 'rgb(';
-    rgbValue += parseInt(rValue.value);
-    rgbValue += ', ';
-    rgbValue += parseInt(gValue.value);
-    rgbValue += ', ' 
-    rgbValue += parseInt(bValue.value);
-    rgbValue += ')';
+    rgbValue += parseInt(rValue.value) + ', ';
+    rgbValue += parseInt(gValue.value) + ', ';
+    rgbValue += parseInt(bValue.value) + ')';
     return rgbValue;
 }
 
+function randomValue() {
+    return Math.floor(Math.random() * 256 );
+}
+
 rgbGenerateButton.addEventListener('click', ()=> {
+    rgbOutput.style.backgroundColor = rgbString();
+    rgbOutput.textContent = rgbString();
+});
+
+rgbRandomizeButton.addEventListener('click', ()=> {
+    $('#rValue').val(randomValue());
+    $('#gValue').val(randomValue());
+    $('#bValue').val(randomValue());
     rgbOutput.style.backgroundColor = rgbString();
     rgbOutput.textContent = rgbString();
 });
