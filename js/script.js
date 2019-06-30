@@ -26,7 +26,7 @@ function initialValues(){
     rgbOutput.textContent = '[ RGB Value ]';
 }
 
-// Clear form inputs and solutions
+// Reset form inputs and solutions
 $('#reset').click(function() {
     $('input').val('');
     initialValues();
